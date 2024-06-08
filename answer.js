@@ -1,4 +1,4 @@
-export class Answer {
+class Answer {
 	static removeVowels(str) {
 		const vowels = ['a', 'e', 'i', 'o', 'u']
 		const removeVowels = []
@@ -19,3 +19,5 @@ export class Answer {
 		})
 	}
 }
+
+exports.Answer = Answer
