@@ -1,6 +1,7 @@
 # Unix Socket Client
 
-Cara ini saya buat terinspirasi ketika saya mendapatkan **teknikal test** dari perusahaan singapura, yang dimana nama productnya itu **[proxycurl](https://nubela.co/proxycurl)** by `Nubela Pte ltd`, yang dimana cara ini itu sama persis seperti apa yang saya kerjakan ketika saya melakukan teknikal test. Jika anda tertarik ingin menggunakan cara ini sebagai acuan dari **teknikal test** untuk interviewer calon karyawan baru sebelum ketahap user interview, anda bisa membuat soal dengan versi anda sendiri.
+Cara ini saya buat terinspirasi ketika saya mendapatkan teknikal test dari perusahaan singapura, yang dimana nama productnya itu `p**x**u*l` by `N*b*l*`, yang dimana caranya ini itu sama persis seperti apa yang saya kerjakan waktu itu ketika saya megerjakan teknikal test. Jika anda tertarik ingin menggunakan cara ini sebagai acuan dari teknikal test untuk interviewer calon karyawan baru tahap awal sebelum ketahap user interview, anda bisa membuat soal - soal dengan versi anda sendiri, menggunakan konsep seperti ini.
+
 
 ## Example Question
 ```js
