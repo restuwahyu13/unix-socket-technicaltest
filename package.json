@@ -1,0 +1,26 @@
+{
+	"name": "unix-socket-technicaltest",
+	"version": "0.0.1",
+	"description": "Unix socket server communication between client and server tehnical test",
+	"main": "index.js",
+	"keywords": [
+		"unix",
+		"socket",
+		"nodejs",
+		"javascript",
+		"ipc"
+	],
+	"author": {
+		"name": "Restu Wahyu Saputra",
+		"email": "restuwahyyu13@gmail.com",
+		"url": "https://github.com/restuwahyu13"
+	},
+	"license": "MIT",
+	"engines": {
+		"node": ">= 18.x.x",
+		"npm": ">= 10.x.x"
+	},
+	"dependencies": {
+		"dirty-json": "^0.9.2"
+	}
+}
