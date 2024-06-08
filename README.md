@@ -4,7 +4,7 @@
 ## Screenshots
 
 - #### Soal Benar
- Berikut ini adalah gambar dimana ketika kita berhasil menyelesai soal dari `tecnical test` sebelumnya contoh soal ke 1, maka nanti akan tampil soal selanjutnya contoh soal ke 2, begitu juga seterus nya sampai semua soal selesai seperti contoh gambar berikut nya.
+   Berikut ini adalah gambar dimana ketika kita berhasil menyelesai soal dari `tecnical test` sebelumnya contoh soal ke 1, maka nanti akan tampil soal selanjutnya contoh soal ke 2, begitu juga seterus nya sampai semua soal selesai seperti contoh gambar berikut nya.
 
   ![](https://i.imgur.com/SOFh5GN.png)
 
