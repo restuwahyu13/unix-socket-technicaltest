@@ -2,7 +2,7 @@ exports.questionsList = [
 	{
 		id: 2,
 		question:
-			"Buatlah sebuah fungsi dengan nama 'sumNumbers(arr)' dengan nama parameter nya itu 'arr', yang dimana fungsi tersebut bisa menghitung sebuah nilai dari setiap input yang diberikan dan ouputnya harus sesuai dengan yang diberikan dari soal berikut ini.",
+			"Buatlah sebuah fungsi dengan nama 'sumNumbers(arr)' dengan nama parameter nya itu 'arr' dan input type value nya ada 'array of object', yang dimana fungsi tersebut bisa menghitung sebuah nilai dari setiap input yang diberikan dan ouputnya harus sesuai dengan yang diberikan dari soal berikut ini.",
 		type: 'math',
 		input: [
 			{ a: 5, b: 5 },
