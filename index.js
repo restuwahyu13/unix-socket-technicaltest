@@ -5,7 +5,7 @@ const socketPath = '/var/run/technicaltest.sock'
 
 const server = net.createServer((socket) => {
 	socket.on('data', (chunk) => {
-		parachunkms = JSON.parse(chunk.toString())
+		chunk = JSON.parse(chunk.toString())
 		const questionId = +chunk.questionId
 
 		if (questionId == 1) {
