@@ -30,7 +30,7 @@ class ValidQuestion {
 
 		if (typeof this.input.output == 'string') {
 			assert.equal(this.input.output, 'rstwhysptr')
-			console.info(`\n\Question No ${findQuestionById.id}: `, findQuestionById, '\n\n')
+			this._screenNextQuestion(this.input.questionId, findQuestionById)
 		} else {
 			this._answerError(this.input.questionId)
 		}
@@ -52,6 +52,21 @@ class ValidQuestion {
 		throw new Error(`Invalid answer for question no ${questionId}`)
 	}
 
+	_screenNextQuestion(questionId, question) {
+		console.info('\n')
+		console.info('===========================================================')
+		console.info('===================== TECHNICAL TEST ======================')
+		console.info('===========================================================')
+		console.info('\n')
+		console.info(`Previous Question No ${questionId}: Correct`)
+		console.info(`Next Question No ${question.id}: `, question)
+		console.info('\n')
+		console.info('===========================================================')
+		console.info('===========================================================')
+		console.info('===========================================================')
+		console.info('\n')
+	}
+
 	_screenCompleted() {
 		console.info('\n')
 		console.info('===========================================================')
@@ -64,6 +79,7 @@ class ValidQuestion {
 		console.info('Regards,')
 		console.info('IT Team Coding Street Art')
 		console.info('\n')
+		console.info('===========================================================')
 		console.info('===========================================================')
 		console.info('===========================================================')
 		console.info('\n')
