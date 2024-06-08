@@ -1,5 +1,5 @@
 const net = require('net')
-const { argsParser } = require('./helpers/cliClient')
+const { argsParser } = require('./helpers/argsParser')
 const { validQuestion } = require('./helpers//validQuestion')
 const { questionsList } = require('./databases/questions')
 
