@@ -1,30 +1,34 @@
 # Unix Socket Client
 
-Cara ini saya buat terinspirasi ketika saya mendapatkan teknikal test dari perusahaan singapura, yang dimana nama productnya itu `p**x**u*l` by `N*b*l*`, yang dimana caranya ini itu sama persis seperti apa yang saya kerjakan waktu itu ketika saya megerjakan teknikal test. Jika anda tertarik ingin menggunakan cara ini sebagai acuan dari teknikal test untuk interviewer calon karyawan baru tahap awal sebelum ketahap user interview, anda bisa membuat soal - soal dengan versi anda sendiri, menggunakan konsep seperti ini.
+Cara ini saya buat terinspirasi ketika saya mendapatkan teknikal test dari perusahaan singapura, yang dimana nama productnya itu `p**x**u*l` by `N*b*l*`, yang dimana caranya ini itu sama persis seperti apa yang saya kerjakan waktu itu ketika saya megerjakan teknikal test. Jika anda tertarik ingin menggunakan cara ini sebagai acuan dari teknikal test untuk interviewer calon karyawan baru tahap awal sebelum ketahap user interview, anda bisa membuat soal - soal dengan versi anda sendiri, menggunakan konsep seperti ini, untuk example server code nya bisa cek di branch `server`.
 
+## Concept Technical Test
+
+- Dari sisi perusahaan hanya akan menyediakan sebuah `docker image` dan 1 pertanyaan tertulis seperti contoh dibawah, yang dimana untuk docker image tersebut sudah bundle dengan code + petanyaan selajutnya yang perlu dijawab oleh si `calon kandidat`, jadi docker image yang di buat dari sisi perusahaan yang akan mengirim request ke sisi server, yang nanti akan di buat oleh si `calon kandidat`.
+
+- Dari sisi kandidat perlu membuat unix server yang di bundle menjadi `docker image,` yang dimana fungsinya untuk menghandle setiap requst yang dikirim dari `docker image` yang dibuat oleh perusahaan, jika setiap request yang dikirim dari `docker image` perusahaan itu sukses, maka nanti akan muncul pertanyaan berikutnya dari sisi `docker images` perusahaan `(unix client)`, jika anda penasaran silahkan coba amati konsepnya dari repo ini.
 
 ## Example Question
 ```js
-	{
-		id: 1,
-		question:
-			"Buatlah sebuah fungsi dengan nama 'removeVowels(str)' dengan nama parameter nya itu 'str' dan input type value nya adalah 'string', yang dimana fungsi tersebut bisa menghapus sebuah nilai yang mengandung huruf vowels dari setiap input yang diberikan dan ouputnya harus sesuai dengan yang diberikan dari soal berikut ini.",
-		type: 'remove string',
-		input: "restu wahyu saputra",
-		output: 'rstwhysptr'
-	}
+ {
+  id: 1,
+  question: "Buatlah sebuah fungsi dengan nama 'removeVowels(str)' dengan nama parameter nya itu 'str' dan input type value nya adalah 'string', yang dimana fungsi tersebut bisa menghapus sebuah nilai yang mengandung huruf vowels dari setiap input yang diberikan dan ouputnya harus sesuai dengan yang diberikan dari soal berikut ini.",
+  type: 'remove string',
+  input: "restu wahyu saputra",
+  output: 'rstwhysptr'
+ }
 ```
 
 ## Command
 
 - ### Server
   ```sh
-    docker run --rm -v .:/var/run --network=none 705471/unixserver-techtest node .
+  docker run --rm -v .:/var/run --network=none 705471/unixserver-techtest node .
   ```
 
 - ### Client
   ```sh
-    docker run --rm -v .:/var/run --network=none 705471/unixclient-techtest node . --socketPath='/var/run/technicaltest.sock' --questionId=1 --input='restu wahyu saputra'
+  docker run --rm -v .:/var/run --network=none 705471/unixclient-techtest node . --socketPath='/var/run/technicaltest.sock' --questionId=1 --input='restu wahyu saputra'
   ```
 
 ## Screenshots
