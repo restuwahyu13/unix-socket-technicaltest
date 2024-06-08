@@ -1,21 +1,26 @@
 const net = require('net')
-const { argsParser } = require('./helpers/cliClient')
-const { validQuestion } = require('./helpers//validQuestion')
-const { questionsList } = require('./databases/questions')
+const fs = require('fs')
+const { Answer } = require('./answer')
+const socketPath = '/var/run/technicaltest.sock'
 
-const argsOutput = argsParser(process.argv)
+const server = net.createServer((socket) => {
+	socket.on('data', (chunk) => {
+		parachunkms = JSON.parse(chunk.toString())
+		const questionId = +chunk.questionId
 
-const client = net.createConnection(argsOutput.socketPath, () => {
-	client.write(JSON.stringify({ questionId: argsOutput.questionId, input: argsOutput.input }))
+		if (questionId == 1) {
+			socket.write(JSON.stringify({ questionId: questionId, output: Answer.removeVowels(chunk.input.name) }))
+		} else if (questionId == 2) {
+			socket.write(JSON.stringify({ questionId: questionId, output: Answer.sumNumbers(chunk.input) }))
+		}
+
+		process.nextTick(() => {
+			fs.unlinkSync(socketPath)
+			process.exit(0)
+		})
+	})
 })
 
-client.on('connect', () => console.info('Unix socket connected to server'))
-
-client.on('data', (chunk) => {
-	const parseChunk = JSON.parse(chunk.toString())
-
-	validQuestion(parseChunk, questionsList)
-	client.end()
+server.listen(socketPath, () => {
+	console.log('Unix socket listening on domain ' + socketPath)
 })
-
-client.on('end', () => console.info('Unix socket closed to server'))
