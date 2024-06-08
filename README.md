@@ -8,7 +8,7 @@ Cara ini saya buat terinspirasi ketika saya mendapatkan teknikal test dari perus
 	{
 		id: 1,
 		question:
-			"Buatlah sebuah fungsi dengan nama 'removeVowels(obj)' dengan nama parameter nya itu 'obj' dan input type value nya adalah 'object', yang dimana fungsi tersebut bisa menghapus sebuah nilai yang mengandung huruf vowels dari setiap input yang diberikan dan ouputnya harus sesuai dengan yang diberikan dari soal berikut ini.",
+			"Buatlah sebuah fungsi dengan nama 'removeVowels(str)' dengan nama parameter nya itu 'str' dan input type value nya adalah 'string', yang dimana fungsi tersebut bisa menghapus sebuah nilai yang mengandung huruf vowels dari setiap input yang diberikan dan ouputnya harus sesuai dengan yang diberikan dari soal berikut ini.",
 		type: 'remove string',
 		input: "restu wahyu saputra",
 		output: 'rstwhysptr'
