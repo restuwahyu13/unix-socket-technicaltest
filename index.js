@@ -9,7 +9,7 @@ const server = net.createServer((socket) => {
 		const questionId = +chunk.questionId
 
 		if (questionId == 1) {
-			socket.write(JSON.stringify({ questionId: questionId, output: Answer.removeVowels(chunk.input.name) }))
+			socket.write(JSON.stringify({ questionId: questionId, output: Answer.removeVowels(chunk.input) }))
 		} else if (questionId == 2) {
 			socket.write(JSON.stringify({ questionId: questionId, output: Answer.sumNumbers(chunk.input) }))
 		}
